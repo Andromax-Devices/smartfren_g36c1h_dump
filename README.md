@@ -1,0 +1,13 @@
+# G36C1H-user 5.1.1 LMY48B YOG4PAS42M release-keys
+- manufacturer: haier
+- platform: msm8916
+- codename: G36C1H
+- flavor: cm_rendang-user
+- release: 5.1.1
+- id: LMY48B
+- incremental: c4e9f095bc
+- tags: release-keys
+- fingerprint: Smartfren/G36C1H/G36C1H:5.1.1/LMY48B/YOG4PAS42M:user/release-keys
+- brand: Smartfren
+- branch: G36C1H-user-5.1.1-LMY48B-YOG4PAS42M-release-keys
+- repo: smartfren_g36c1h_dump
