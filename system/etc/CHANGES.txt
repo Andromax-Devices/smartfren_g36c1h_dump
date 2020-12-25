@@ -1,0 +1,212 @@
+===================================
+Since Sun Sep 25 06:12:05 UTC 2016
+===================================
+
+   * packages/apps/DeskClock
+026244e Allow music files other than OGG to be chosen as alarm
+
+===================================
+Since Mon Aug 22 08:21:26 UTC 2016
+===================================
+
+   * build
+e07d371 Updating security string to 2016-09-01 to platform and CTS in preparation for 2016 September OTA
+
+   * external/bouncycastle
+94493e0 GCMParameters: in ASN1 encoding, use 12 when no value is specified
+
+   * external/flac
+ff886db src/libFLAC/stream_decoder.c : Fix NULL de-reference.
+
+   * external/jhead
+2e44d90 Fix possible out of bounds accesses
+
+   * external/libvpx
+42fe8ae DO NOT MERGE | libvpx: cherry-pick aa1c813 from upstream
+
+   * external/mm-dash
+9fb679d Add dest length parameter to utf16_to_utf8
+
+   * external/sonivox
+e2d67a9 Fix NULL pointer dereference
+
+   * frameworks/av
+d2e99a7 DO NOT MERGE - stagefright: fix integer overflow error
+9b5caa8 DO NOT MERGE Add bound checks to utf16_to_utf8
+a44a662 DO NOT MERGE - SoftVPX: fix nFilledLen overflow
+5b26c5b DO NOT MERGE stagefright: fix possible stack overflow in AVCC reassemble
+3e6589e DO NOT MERGE - SoftMP3: memset safely
+8326655 OMXCodec: check IMemory::pointer() before using allocation
+a442cb7 Impose a size bound for dynamically allocated tables in stbl.
+7af0de2 omx: prevent input port enable/disable for software codecs
+08ed47a Fix corruption via buffer overflow in mediaserver
+
+   * frameworks/base
+4e416c7 DO NOT MERGE: Fix CTS regression
+a644bab Fix string equality comparison
+c02afdc WifiEnterpriseConfiguration: Do not print credentials in toString
+a3fa2ec DO NOT MERGE: Remove the use of JHEAD in ExifInterface
+
+   * frameworks/opt/telephony
+f027b90 DO NOT MERGE add private function converSafeLabel
+8673b3f Do not allow premium SMS during SuW
+
+   * hardware/qcom/media-caf/msm8974
+08472db dashplayer: Adding extra parameter for utf16_to_utf8
+
+   * libcore
+20c23b8 CipherTest: in ASN1 encoding for GCM, no value for tag size means 12
+
+   * packages/apps/Email
+8521557 stop exporting EmailAccountCacheProvider
+
+   * packages/services/Telephony
+a2da9be Make TTY broadcasts protected
+
+   * system/core
+a2b4360 DO NOT MERGE: adb: use asocket's close function when closing.
+2cdbe55 DO NOT MERGE libutils/Unicode.cpp: Correct length computation and add checks for utf16->utf8
+82f218b DO NOT MERGE: debuggerd: verify that traced threads belong to the right process.
+
+===================================
+Since Sun Aug  7 13:50:49 UTC 2016
+===================================
+
+   * build
+e128849 Update security patch string to 2016-08-05
+
+   * external/bluetooth/bluedroid
+1a77913 DO NOT MERGE Fix potential DoS caused by delivering signal to  BT process
+
+   * external/conscrypt
+d04f9ef Use SSL_session_reused to check when a session was reused
+
+   * external/jhead
+4ba623c Fix possible out of bounds access
+
+   * external/openssl
+09e84e2 Fix memory issues in BIO_*printf functions
+
+   * frameworks/av
+21e0fd1 DO NOT MERGE omx: check buffer port before using
+998ab61 DO NOT MERGE: Camera: Adjust pointers to ANW buffers to avoid infoleak
+3d89d0b Check effect command reply size in AudioFlinger
+05d3017 SoftAAC2: fix crash on all-zero adts buffer
+44460fb Don't use sp<>&
+a01e6ba Fix potential overflow
+
+   * frameworks/base
+4caa064 DO NOT MERGE: Add pm operation to set user restrictions.
+1e70890 DO NOT MERGE: Reduce shell power over user management.
+b74c808 Don't trust callers to supply app info to bindBackupAgent()
+2040bf6 DO NOT MERGE Fix intent filter priorities
+
+   * frameworks/native
+ae5f819 Add FrameStats default constructor
+
+   * frameworks/opt/net/wifi
+ce268a2 Deal correctly with short strings
+
+   * frameworks/opt/telephony
+ac1ed64 backport security fix: avoid set NITZ time to 2038
+
+   * hardware/qcom/media/default
+f2180f3 DO NOT MERGE mm-video-v4l2: venc: add checks before accessing heap pointers
+d31c25c DO NOT MERGE Fix wrong nAllocLen
+
+   * hardware/qcom/media-caf/msm8916
+84513fa DO NOT MERGE mm-video-v4l2: venc: add checks before accessing heap pointers
+876fd22 DO NOT MERGE Fix wrong nAllocLen
+
+   * hardware/qcom/media-caf/msm8974
+fe58d73 DO NOT MERGE mm-video-v4l2: venc: add checks before accessing heap pointers
+d6cdc33 DO NOT MERGE Fix wrong nAllocLen
+
+   * hardware/qcom/media-caf/msm8994
+46985a5 DO NOT MERGE mm-video-v4l2: venc: add checks before accessing heap pointers
+3455a06 DO NOT MERGE Fix wrong nAllocLen
+
+   * prebuilts/cmsdk
+755b224 prebuilts/cmsdk: Provide release artifact for Fig.
+
+   * vendor/cm
+01e2b55 Allow maintenance versions to be ignored
+3c8c85e version: Set version string to 12.1.1 to reflect security update
+
+===================================
+Since Sun Jul 10 22:07:11 UTC 2016
+===================================
+
+   * vendor/cm
+be78fee Tele2 (LT) APN updates
+
+===================================
+Since Sun Jun 26 22:05:58 UTC 2016
+===================================
+
+   * android
+19fd0b0 default.xml: Branch out external/conscrypy and external/jhead for security mantainance
+
+   * build
+30ef6e7 Updating security string to 2016-07-01
+
+   * dalvik
+f01dac7 Fix potential buffer overrun.
+
+   * external/bluetooth/bluedroid
+f2e0de1 BT: Update calls to sBtInterface
+ddb0fb9 DO NOT MERGE btif: check overflow on create_pbuf size
+2bd881e Add guest mode functionality (2/3)
+
+   * external/libpng
+aeddf70 DO NOT MERGE Update libpng to 1.6.20
+
+   * external/openssl
+8e78194 Check that we have enough padding characters.
+7dd91db Fix encoding bug in i2c_ASN1_INTEGER
+
+   * external/sepolicy
+5eba1de Remove generic socket access from untrusted processes
+
+   * external/tremolo
+4151e3f Check partword is in range for # of partitions
+
+   * frameworks/av
+4b6ef5c MPEG4Extractor: ensure kKeyTrackID exists before creating an MPEG4Source as track.
+b262a61 Check malloc result to avoid NPD
+55dadcd limit mediaserver memory
+8298230 h264bsdActivateParamSets: Prevent multiplication overflow.
+8851a9d Fix security vulnerability in libstagefright
+6ffe4d2 Clear unused pointer field when sending across binder
+
+   * frameworks/base
+df57cc4 DO NOT MERGE : backport of backup transport whitelist
+9ff7397 Don't pass URL path and username/password to PAC scripts
+
+   * frameworks/native
+b92977d Correctly handle dup() failure in Parcel::readNativeHandle
+
+   * hardware/libhardware
+ebebabf Add guest mode functionality (1/3)
+
+   * hardware/qcom/audio/default
+030a173 DO NOT MERGE Fix AudioEffect reply overflow
+
+   * hardware/qcom/audio-caf/msm8916
+0ff3f4c DO NOT MERGE Fix AudioEffect reply overflow
+
+   * hardware/qcom/audio-caf/msm8974
+f5a1842 DO NOT MERGE Fix AudioEffect reply overflow
+
+   * hardware/qcom/audio-caf/msm8994
+f6ed9ad DO NOT MERGE Fix AudioEffect reply overflow
+
+   * packages/apps/Bluetooth
+59bcdd4 Add guest mode functionality (3/3)
+
+   * packages/apps/Nfc
+78c52d5 Verify setForegroundDispatch caller is in foreground.
+
+   * system/core
+31f14de Fix scanf %s in lsof.
+
