@@ -1,0 +1,13 @@
+# rendang-user 5.0.2 LRX22G YNG1TBS1DM dev-keys
+- manufacturer: haier
+- platform: msm8916
+- codename: rendang
+- flavor: user
+- release: 5.0.2
+- id: LRX22G
+- incremental: 8ee80facfc
+- tags: dev-keys
+- fingerprint: Smartfren/rendang/rendang:5.0.2/LRX22G/YNG1TBS1DM:user/dev-keys
+- brand: Smartfren
+- branch: rendang-user-5.0.2-LRX22G-YNG1TBS1DM-dev-keys
+- repo: smartfren_rendang_dump

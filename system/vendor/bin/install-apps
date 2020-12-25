@@ -1,0 +1,45 @@
+#!/system/bin/sh
+
+BUNDLED_APP_DIR=/vendor/bundled-app
+
+get_app_package()
+{
+    local path=$1
+
+    echo "$(aapt dump badging "$path" | grep -o "package: name='[^']*'" | cut -d \' -f 2)"
+}
+
+install_app()
+{
+    local app=$1
+    local package=$(get_app_package "$app")
+
+    # If package doesn't exist and we had it before user uninstalled it
+    if [ -e /data/misc/cyngn/prebundle/$package ] &&
+       [ -z $(pm list packages | grep $package) ]; then
+        return 0
+    fi
+
+    pm install -r $app
+
+    touch "/data/misc/cyngn/prebundle/$package"
+}
+
+LAST_OS_VERSION=$(getprop persist.sys.prebundle.done)
+CURRENT_OS_VERSION=$(getprop ro.build.version.incremental)
+
+# skip install on tempfs data partition
+if [ $(getprop vold.decrypt) == "trigger_restart_min_framework" ]; then
+    exit 0
+fi
+
+# Do nothing if no OS version change
+if [ "$LAST_OS_VERSION" == "$CURRENT_OS_VERSION" ]; then
+    exit 0
+fi
+
+for apk in $BUNDLED_APP_DIR/**/*.apk; do
+    install_app $apk
+done
+
+setprop persist.sys.prebundle.done "$CURRENT_OS_VERSION"
