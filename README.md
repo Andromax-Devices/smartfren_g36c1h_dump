@@ -1,0 +1,13 @@
+# G36C1H-user 5.0.2 LRX22G YNG1TBS2XI release-keys
+- manufacturer: haier
+- platform: msm8916
+- codename: G36C1H
+- flavor: user
+- release: 5.0.2
+- id: LRX22G
+- incremental: e7882ddb7d
+- tags: release-keys
+- fingerprint: Smartfren/G36C1H/G36C1H:5.0.2/LRX22G/YNG1TBS2XI:user/release-keys
+- brand: Smartfren
+- branch: G36C1H-user-5.0.2-LRX22G-YNG1TBS2XI-release-keys
+- repo: smartfren_g36c1h_dump
