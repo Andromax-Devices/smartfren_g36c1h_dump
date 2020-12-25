@@ -1,3 +1,5 @@
+.gitignore
+README.md
 all_files.txt
 board-info.txt
 boot.img
